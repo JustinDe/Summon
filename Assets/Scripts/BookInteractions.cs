@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 public class BookInteractions : MonoBehaviour {
-    private SpriteRenderer spriteRenderer; 
+    private SpriteRenderer spriteRenderer;
+    public AudioClip bookOpenSound;
+    public AudioClip bookCloseSound;
+    private AudioSource bookSound;
     public GenericObjController goc;
     public Sprite defaultSprite;
     public Sprite activeSprite;
+    private bool bookOpen = false;
     
     void Start() {
-        spriteRenderer = GetComponent<SpriteRenderer>(); 
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        bookSound = GetComponent<AudioSource>();
         if (spriteRenderer.sprite == null) 
             spriteRenderer.sprite = defaultSprite; 
     }
@@ -17,7 +22,8 @@ public class BookInteractions : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.JoystickButton7) == true || Input.GetKeyDown(KeyCode.JoystickButton5) == true || Input.GetMouseButtonDown(0)) {
             if (goc.lookCheck() == true) {
                 Debug.Log("Interacted with " + gameObject.name);
-                toggleSprite();
+                openBook();
+                
             }
         }
 
@@ -29,13 +35,27 @@ public class BookInteractions : MonoBehaviour {
         //}
     }
 
-    void toggleSprite() {
-        if (spriteRenderer.sprite == defaultSprite) {
-            spriteRenderer.sprite = activeSprite;
-        }
+    void openBook() {
 
+        if (bookOpen == false) {
+            spriteRenderer.sprite = activeSprite;
+            bookSound.clip = bookOpenSound; 
+            bookSound.Play();
+            bookOpen = true;
+        }
         else {
             spriteRenderer.sprite = defaultSprite; // otherwise change it back to defaultSprite
+            bookSound.clip = bookCloseSound;
+            bookSound.Play();
+            bookOpen = false;
+
         }
+        //if (spriteRenderer.sprite == defaultSprite) {
+        //    spriteRenderer.sprite = activeSprite;
+        //}
+
+        //else {
+        //    spriteRenderer.sprite = defaultSprite; // otherwise change it back to defaultSprite
+        //}
     }
 }
