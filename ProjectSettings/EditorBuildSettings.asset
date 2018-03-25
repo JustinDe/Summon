@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/GoogleVR/Demos/Scenes/HelloVR.unity
+    guid: bb36d2905dc634f1c9eecb35beecaca8
+  - enabled: 0
+    path: Assets/Scenes/sandbox.unity
+    guid: dd5d581d365b70f458272f59f7e5af39
+  - enabled: 1
+    path: Assets/Scenes/summon.unity
+    guid: 4cd1363f07881504f81f1875d4e8a7be
