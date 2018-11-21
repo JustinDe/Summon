@@ -9,6 +9,9 @@ TagManager:
   - TagLight
   - Subtitle
   - Music
+  - Room
+  - DoorI
+  - DoorN
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/summon.unity
+- path: Assets/Scenes/sandbox-gates.unity
   isLoaded: 1
   isActive: 1
