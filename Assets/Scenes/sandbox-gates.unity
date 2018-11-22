@@ -205,11 +205,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalRotation.x
@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalRotation.z
@@ -225,7 +225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
       propertyPath: m_RootOrder
@@ -235,6 +235,10 @@ Prefab:
         type: 2}
       propertyPath: m_ClearFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101550771769456, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2e1782f6fa056247bded0e40b7bfd54, type: 2}
@@ -298,6 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1520251135}
   - component: {fileID: 1520251137}
+  - component: {fileID: 1520251136}
   m_Layer: 0
   m_Name: WorldManager
   m_TagString: Untagged
@@ -318,6 +323,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520251136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520251134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62a388ad3603cc4fa0d3198d53186ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugObjectPrefab: {fileID: 1737705960745336, guid: 1232e66c3cbe66940b51188b17d5c87b,
+    type: 2}
+  debugSpaws: 1
 --- !u!114 &1520251137
 MonoBehaviour:
   m_ObjectHideFlags: 0
